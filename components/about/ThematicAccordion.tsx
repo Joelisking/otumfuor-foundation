@@ -6,12 +6,12 @@ import {
   AccordionTrigger,
 } from '../ui/accordion';
 import { accordionItems } from '@/lib/data';
-import Heading from '../shared/heading';
+import SectionHeading from '../shared/heading';
 
 function ThematicAreas() {
   return (
     <section className="mt-24">
-      <Heading title="Thematic Areas" />
+      <SectionHeading title="Thematic Areas" />
       <Accordion
         type="single"
         collapsible

@@ -1,12 +1,12 @@
 import React from 'react';
-import Heading from '../shared/heading';
+import SectionHeading from '../shared/heading';
 import Image from 'next/image';
 import { coreValues } from '@/lib/data';
 
 function CoreValues() {
   return (
     <section>
-      <Heading title="our core values" />
+      <SectionHeading title="our core values" />
       <p className="text-base lg:text-xl mt-3 lg:mt-6">
         Succeeding the Asante golden stool as the 16th Asantehene, the
         goal of Otumfuo Osei Tutu II has been to guard the interest of
@@ -17,7 +17,7 @@ function CoreValues() {
         {coreValues.map(({ src, label }, index) => (
           <div
             key={index}
-            className="flex items-center justify-center py-2 px-4 sm:px-6 lg:px-8 space-x-4 shadow-md rounded-xl">
+            className="flex items-center justify-center py-2 px-4 sm:px-6 lg:px-8 space-x-4 shadow-xl rounded-xl">
             <Image src={src} alt={`${label} Icon`} />
             <span className="text-lg sm:text-xl lg:text-2xl font-medium">
               {label}

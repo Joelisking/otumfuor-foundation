@@ -1,5 +1,5 @@
 import React from 'react';
-import Heading from '../shared/heading';
+import SectionHeading from '../shared/heading';
 import BoardCard from './BoardCard';
 import { IBoard } from '@/lib/types';
 import { client, urlFor } from '@/lib/sanity';
@@ -20,7 +20,7 @@ async function BoardOfTrustees() {
   const data: IBoard[] = await getData();
   return (
     <section className="mt-24">
-      <Heading title="board of trustees" />
+      <SectionHeading title="board of trustees" />
       <p className="text-base lg:text-xl mt-3 lg:mt-6">
         The selfless efforts and commitment of these people make the
         realisation of the dreams of the foundation possible

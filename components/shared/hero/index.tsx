@@ -37,12 +37,15 @@ function Hero({
         <p className="text-base lg:text-xl">{description}</p>
         {showButtons && (
           <div className="flex gap-5">
-            <Button onClick={() => router.push(primaryButtonUrl)}>
+            <Button
+              onClick={() => router.push(primaryButtonUrl)}
+              className="capitalize">
               {primaryButtonText}
             </Button>
             <Button
               variant="outline"
-              onClick={() => router.push(secondaryButtonUrl)}>
+              onClick={() => router.push(secondaryButtonUrl)}
+              className="capitalize">
               {secondaryButtonText}
             </Button>
           </div>

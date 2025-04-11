@@ -1,4 +1,3 @@
-import Hero from '@/components/home/Hero';
 import Partners from '@/components/home/Partners';
 import RecentStories from '@/components/home/RecentStories';
 import StatsBanner from '@/components/home/StatsBanner';
@@ -8,7 +7,6 @@ import ThematicAreas from '@/components/home/ThematicAreas';
 export default function Home() {
   return (
     <div className="max-w-7xl mx-auto">
-      <Hero />
       <StatsBanner />
       <ThematicAreas />
       <TextBanner />

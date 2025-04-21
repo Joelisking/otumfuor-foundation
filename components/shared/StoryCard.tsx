@@ -44,7 +44,7 @@ export default function StoryCard({
             </div>
           )}
         </div>
-        <div className="p-4">
+        <div className="p-4 bg-gray-50">
           {date && (
             <p className="text-sm text-gray-500 mb-2">
               {formatDate(date)}

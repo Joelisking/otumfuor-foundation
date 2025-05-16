@@ -10,13 +10,13 @@ import SectionHeading from '../shared/heading';
 
 function ThematicAreas() {
   return (
-    <section className="mt-36">
+    <section className="mt-16 md:mt-24 lg:mt-36">
       <SectionHeading title="Thematic Areas" />
       <Accordion
         type="single"
         collapsible
         defaultValue="item-1"
-        className="mt-12 w-full shadow-2xl px-2 md:px-3 py-4 rounded-3xl">
+        className="mt-4 md:mt-8 lg:mt-12 w-full shadow-sm md:shadow-xl px-2 md:px-3 py-4 rounded-3xl">
         {accordionItems.map((item) => (
           <AccordionItem
             key={item.id}

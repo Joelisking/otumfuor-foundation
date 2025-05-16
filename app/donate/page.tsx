@@ -1,5 +1,5 @@
 import PaymentBanner from '@/components/donate/PaymentBanner';
-import img from '@/public/about.jpg';
+import img from '@/public/donate-hero.jpg';
 import Hero from '@/components/shared/hero';
 import React from 'react';
 

@@ -6,25 +6,27 @@ import { contactDetails } from '@/lib/data';
 
 function GetInTouch() {
   return (
-    <section className="my-36">
+    <section className="my-12 md:my-24 lg:my-36">
       <SectionHeading title="get in touch" />
-      <div className="mt-6 grid grid-cols-3 gap-8">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         {contactDetails.map((detail) => (
           <Card
             key={detail.number}
-            className="bg-neutral-50 rounded-3xl flex flex-col pb-14">
+            className="bg-neutral-50 rounded-3xl flex flex-col pb-8 md:pb-10 lg:pb-14">
             <CardHeader className="h-10 lg:h-14 flex items-center">
               <div className="bg-primary py-2 px-4 rounded-lg">
-                <span className="text-2xl text-white">
+                <span className="text-xl md:text-2xl text-white">
                   {detail.number}
                 </span>
               </div>
             </CardHeader>
             <CardContent className="text-foreground flex-1">
-              <span className="capitalize text-xl md:text-2xl font-bold block">
+              <span className="capitalize text-lg md:text-xl lg:text-2xl font-bold block">
                 {detail.title}
               </span>
-              <p className="mt-6 lg:text-xl">{detail.description}</p>
+              <p className="mt-4 md:mt-6 text-base lg:text-xl whitespace-pre-line">
+                {detail.description}
+              </p>
             </CardContent>
           </Card>
         ))}

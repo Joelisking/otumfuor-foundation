@@ -6,10 +6,10 @@ import { cardData } from '@/lib/data';
 
 function MissionVision() {
   return (
-    <section className="mt-36">
+    <section className="mt-16 md:mt-24 lg:mt-36">
       <SectionHeading title="our mission and vision" />
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-7">
+      <div className="mt-4 md:mt-8 lg:mt-12 grid grid-cols-1 md:grid-cols-2 gap-7">
         {cardData.map((card) => (
           <Card
             key={card.id}

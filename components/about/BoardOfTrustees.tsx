@@ -19,7 +19,7 @@ async function getData() {
 async function BoardOfTrustees() {
   const data: IBoard[] = await getData();
   return (
-    <section className="my-36">
+    <section className="my-16 md:my-24 lg:my-36">
       <SectionHeading title="board of trustees" />
       <p className="text-base lg:text-xl mt-3 lg:mt-6">
         The selfless efforts and commitment of these people make the

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 
@@ -20,7 +20,6 @@ function Hero({
   title,
   description,
   imageSrc,
-  imageAlt = 'Hero Image',
   showButtons = true,
   primaryButtonText = 'Donate Now',
   secondaryButtonText = 'Get In Touch',
@@ -30,22 +29,23 @@ function Hero({
   const HeroContent = () => {
     const router = useRouter();
     return (
-      <div className="space-y-6 w-full md:w-1/2">
-        <h1 className="capitalize text-3xl lg:text-5xl font-bold">
+      <div className="space-y-4 md:space-y-6 w-full md:w-2/3 text-white z-10">
+        <h1 className="capitalize text-2xl md:text-3xl lg:text-4xl font-bold line-clamp-2">
           {title}
         </h1>
-        <p className="text-base lg:text-xl">{description}</p>
+        <p className="text-sm md:text-base lg:text-xl line-clamp-3 md:line-clamp-4">
+          {description}
+        </p>
         {showButtons && (
-          <div className="flex gap-5">
+          <div className="flex flex-row gap-5">
             <Button
               onClick={() => router.push(primaryButtonUrl)}
               className="capitalize">
               {primaryButtonText}
             </Button>
             <Button
-              variant="outline"
               onClick={() => router.push(secondaryButtonUrl)}
-              className="capitalize">
+              className="capitalize bg-white text-primary hover:bg-gray-100">
               {secondaryButtonText}
             </Button>
           </div>
@@ -54,23 +54,20 @@ function Hero({
     );
   };
 
-  const HeroImage = () => (
-    <div className="w-full md:w-1/2 rounded-2xl">
-      <Image
-        src={imageSrc}
-        alt={imageAlt}
-        width={5000}
-        height={4000}
-        className="rounded-2xl"
-      />
-    </div>
-  );
-
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-32 pt-12 pb-16 md:pt-20 md:pb-28 xl:pb-36">
-      <HeroContent />
-      <HeroImage />
-    </section>
+    <div
+      className="flex items-center h-96 md:h-80 lg:h-96 xl:h-112 w-full relative mt-10 lg:mt-20 rounded-2xl overflow-hidden"
+      style={{
+        backgroundImage: `url(${imageSrc})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}>
+      <div className="absolute inset-0 bg-black opacity-70" />
+      <div className="w-full h-full flex items-center px-6 md:px-12">
+        <HeroContent />
+      </div>
+    </div>
   );
 }
 

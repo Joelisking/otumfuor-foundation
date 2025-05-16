@@ -4,13 +4,25 @@ import transformation from '@/public/transformation.svg';
 import commitment from '@/public/commitment.svg';
 import mission from '@/public/mission.svg';
 import vision from '@/public/vision.svg';
-import about from '@/public/about.jpg';
-import company1 from '@/public/ecom.png';
+import partner1 from '@/public/partners/ecom.svg';
+import partner2 from '@/public/partners/global-communities.svg';
+import partner3 from '@/public/partners/mastercard.svg';
+import partner4 from '@/public/partners/newmont.svg';
+import partner5 from '@/public/partners/smiles.svg';
+import partner6 from '@/public/partners/zoomlion.svg';
 import facebook from '@/public/facebook.svg';
 import instagram from '@/public/instagram.svg';
 import youtube from '@/public/youtube.svg';
 import linkedin from '@/public/linkedin.svg';
 import x from '@/public/x.svg';
+import ecobank from '@/public/payment/ecobank.svg';
+import fidelity from '@/public/payment/fidelity.svg';
+import momo from '@/public/payment/momo.svg';
+import culture from '@/public/thematic/culture.jpg';
+import education from '@/public/thematic/education.jpg';
+import entrepreneurship from '@/public/thematic/entrepreneurship.jpg';
+import health from '@/public/thematic/health.jpg';
+import water from '@/public/thematic/water.jpg';
 
 export const coreValues = [
   { src: transformation, label: 'Transformation' },
@@ -39,31 +51,29 @@ export const cardData = [
 export const paymentData = [
   {
     id: 1,
-    image: company1,
+    image: ecobank,
     cedititle: 'Cedi A/C No.',
     usdtitle: 'USD A/C No.',
     swifttitle: 'Swift Code',
     cedi: 1441000703293,
     dollar: 3441000703294,
-    swift: ':ECOCGHAC',
+    swift: 'ECOCGHAC',
   },
   {
     id: 2,
-    image: company1,
+    image: fidelity,
     cedititle: 'Cedi A/C No.',
-    usdtitle: 'USD A/C No.',
     swifttitle: 'Swift Code',
-    cedi: 1441000703293,
-    dollar: 3441000703294,
-    swift: ':ECOCGHAC',
+    cedi: 1050781993617,
+    swift: 'FBLIGHAC',
   },
   {
     id: 3,
-    image: company1,
+    image: momo,
     cedititle: 'MoMo No.',
     usdtitle: 'Merchant I.D.',
     swifttitle: '',
-    cedi: 1441000703293,
+    cedi: '0597402464',
     dollar: 3441000703294,
     swift: '',
   },
@@ -72,63 +82,33 @@ export const paymentData = [
 export const partnersData = [
   {
     id: 1,
-    image: company1,
-    alt: 'company-1',
+    image: partner1,
+    alt: '',
   },
   {
     id: 2,
-    image: company1,
-    alt: 'company-1',
+    image: partner2,
+    alt: '',
   },
   {
     id: 3,
-    image: company1,
-    alt: 'company-1',
+    image: partner3,
+    alt: '',
   },
   {
     id: 4,
-    image: company1,
-    alt: 'company-1',
+    image: partner4,
+    alt: '',
   },
   {
     id: 5,
-    image: company1,
+    image: partner5,
     alt: 'company-1',
   },
   {
     id: 6,
-    image: company1,
-    alt: 'company-1',
-  },
-  {
-    id: 7,
-    image: company1,
-    alt: 'company-1',
-  },
-  {
-    id: 8,
-    image: company1,
-    alt: 'company-1',
-  },
-  {
-    id: 9,
-    image: company1,
-    alt: 'company-1',
-  },
-  {
-    id: 10,
-    image: company1,
-    alt: 'company-1',
-  },
-  {
-    id: 11,
-    image: company1,
-    alt: 'company-1',
-  },
-  {
-    id: 12,
-    image: company1,
-    alt: 'company-1',
+    image: partner6,
+    alt: '',
   },
 ];
 
@@ -139,21 +119,29 @@ export const homeData = [
       '25TH ANNIVERSARY: OTUMFUO OSEI TUTU II FOUNDATION FUNDRAISING GALA.',
     description:
       'In 25 Years, we have improved the lives of Ghanaians by implementing the ideals, values and visions of its patron, the Asantehene and the Asante Kingdom, using this medium to accelerate the transformation of Africa.',
-    image: about,
+    image: '/banners/1.jpeg',
   },
   {
     id: 2,
     title: 'Welcome to the Otumfuo Osei Tutu II Foundation',
     description:
       'The Otumfuo Osei Tutu II Foundation seeks to improve the lives of Ghanaians by implementing the ideals, values and visions of its patron, the Asantehene and the Asante Kingdom, using this medium to accelerate the transformation of Africa.',
-    image: about,
+    image: '/banners/2.jpeg',
   },
   {
     id: 3,
     title: 'LADY JULIA’S MENTORSHIP MASTERCLASS',
     description:
       'Lady Julia Osei Tutu has commemorated the 2025 International Women’s Day with the Lady Julia’s Mentorship Masterclass, under the theme: “Accelerate Action: Together we can forge women’s equality”, at the Great Hall of KNUST on March 7, 2025.',
-    image: about,
+    image: '/banners/3.jpeg',
+  },
+  {
+    id: 4,
+    title:
+      'Lady Julia Cuts Sod For Kumasi Children’s Park Redevelopment',
+    description:
+      'Lady Julia, the wife of Asantehene Otumfuo Osei Tutu II has performed the sod-cutting ceremony for the redevelopment of Kumasi Children’s Park.',
+    image: '/banners/4.jpeg',
   },
 ];
 
@@ -163,35 +151,35 @@ export const thematicData = [
     title: 'Water & Sanitation',
     description:
       'Providing potable water in rural areas to help eradicate water-borne disease to foster healthier communities.',
-    image: about,
+    image: water,
   },
   {
     id: 2,
     title: 'Health',
     description:
       'Providing sustainable health care services to protect vulnerable populations in Ghana from infectious disease.',
-    image: about,
+    image: health,
   },
   {
     id: 3,
     title: 'Culture & Heritage',
     description:
       'Promoting and preserving the culture and natural heritage of the Asante Kingdom for development in tourism.',
-    image: about,
+    image: culture,
   },
   {
     id: 4,
     title: 'Education',
     description:
       'Providing equal learning opportunities to support education of children from pre-school age through to adolescence.',
-    image: about,
+    image: education,
   },
   {
     id: 5,
     title: 'Entrepreneurship',
     description:
       'Rallying partners in business, academia, and the wider society to drive a unique rejuvenation of Ghanaian entrepreneurship.',
-    image: about,
+    image: entrepreneurship,
   },
 ];
 
@@ -203,12 +191,12 @@ export const statsData = [
   },
   {
     id: 2,
-    number: 9,
+    number: 5,
     description: 'Life-Changing Projects',
   },
   {
     id: 3,
-    number: 20,
+    number: 10,
     description: 'Volunteers',
   },
   {
@@ -218,13 +206,13 @@ export const statsData = [
   },
   {
     id: 5,
-    number: 12,
+    number: 10,
     description: 'Beneficiary Schools',
   },
   {
     id: 6,
-    number: 8,
-    description: 'Region',
+    number: 7,
+    description: 'Regions',
   },
 ];
 
@@ -303,11 +291,14 @@ export const contactDetails = [
   {
     number: 2,
     title: 'Call Us',
-    description: '+233 32 200 5892',
+    description: `+233 322 005 892 
+       + 233 593 105 205
+       + 233 257 152 176`,
   },
   {
     number: 3,
     title: 'Email Us',
-    description: 'info@otumfuofoundation.org.gh',
+    description: `infor@otumfuofoundation.org.gh
+       hkodua@otumfuofoundation.org.gh`,
   },
 ];

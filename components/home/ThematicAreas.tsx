@@ -1,13 +1,14 @@
 import React from 'react';
 import { thematicData } from '@/lib/data';
 import ThematicCard from '../shared/ThematicCard';
+import Heading from '../shared/heading';
 
 function ThematicAreas() {
   return (
-    <section className="mt-36">
+    <section className="mt-16 md:mt-24 lg:mt-36">
       <div>
-        <p className="text-4xl font-bold py-5">Thematic Areas</p>
-        <p>
+        <Heading title="Thematic Areas" />
+        <p className="mt-3">
           The foundation is working under five broad thematic areas,
           which are in line with the achievement of aspects of
           Sustainable Development Goals (SDGs), GPRS II and NEPAD

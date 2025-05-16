@@ -3,7 +3,7 @@ import CoreValues from '@/components/about/CoreValues';
 import MissionVision from '@/components/about/MissionVision';
 import ThematicAccordion from '@/components/about/ThematicAccordion';
 import Hero from '@/components/shared/hero';
-import img from '@/public/about.jpg';
+import img from '@/public/about-hero.jpg';
 
 function About() {
   return (

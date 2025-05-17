@@ -30,7 +30,7 @@ function Hero({
   const HeroContent = () => {
     const router = useRouter();
     return (
-      <div className="space-y-4 md:space-y-6 md:w-2/3 lg:w-4/5 text-white z-10 w-screen">
+      <div className="space-y-4 md:space-y-6 md:w-2/3 lg:w-4/5 text-white z-10 w-screen px-8 lg:px-0">
         <h1 className="capitalize text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold line-clamp-2">
           {title}
         </h1>

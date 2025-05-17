@@ -127,7 +127,7 @@ function Navbar() {
                 Contact
               </Link>
             </li>
-            <li className="bg-primary py-1.5 rounded-md cursor-pointer hover:bg-primary/90 hover:scale-105 transition-all">
+            <li className="bg-primary py-1.5 px-4 rounded-md cursor-pointer hover:bg-primary/90 hover:scale-105 transition-all">
               <Link
                 href="/donate"
                 onClick={closeMenu}

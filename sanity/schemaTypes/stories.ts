@@ -43,6 +43,19 @@ export default {
       description: 'Toggle this to display this story on the home page.',
     },
     {
+      name: 'showInHeroCarousel',
+      type: 'boolean',
+      title: 'Show in Hero Carousel?',
+      description: 'Toggle this to display this story in the hero carousel on the homepage.',
+    },
+    {
+      name: 'carouselPriority',
+      type: 'number',
+      title: 'Carousel Priority',
+      description: 'Set the display priority in the carousel (lower number = higher priority)',
+      hidden: ({document}: {document?: Record<string, any>}) => !document?.showInHeroCarousel,
+    },
+    {
       name: 'upcoming',
       type: 'boolean',
       title: 'Upcoming Story?',

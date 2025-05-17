@@ -41,7 +41,7 @@ export default async function BlogArticle({
   const data: INewsArticle = await getData(id);
 
   return (
-    <div className="my-36">
+    <main className="px-8 lg:px-0 max-w-7xl mx-auto lg:my-36">
       <h1>
         <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
           {data?.title}
@@ -62,6 +62,6 @@ export default async function BlogArticle({
       <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
         <PortableText value={data?.content} />
       </div>
-    </div>
+    </main>
   );
 }

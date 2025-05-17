@@ -21,8 +21,8 @@ function Socials() {
             target="_blank"
             rel="noopener noreferrer"
             className="group">
-            <div className="bg-white hover:bg-primary/5 border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:shadow-lg flex flex-col items-center">
-              <div className="bg-primary/10 p-4 rounded-full mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:shadow-lg flex flex-col items-center hover:scale-105">
+              <div className="bg-primary p-4 rounded-full mb-4 transition-colors duration-300">
                 <Image
                   src={s.img}
                   alt={`${s.name} Logo`}

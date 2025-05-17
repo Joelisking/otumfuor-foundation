@@ -5,7 +5,7 @@ import img from '@/public/contact.jpg';
 
 function Contact() {
   return (
-    <section>
+    <main className="px-8 lg:px-0 max-w-7xl mx-auto">
       <Hero
         title="We are only a message away, contact us now"
         description="Our doors are always open to you for collaborations and enquiries."
@@ -14,7 +14,7 @@ function Contact() {
       />
       <Socials />
       <GetInTouch />
-    </section>
+    </main>
   );
 }
 

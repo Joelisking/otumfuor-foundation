@@ -7,7 +7,7 @@ import RecentStories2 from '@/components/stories/RecentStories';
 
 function Stories() {
   return (
-    <div>
+    <main className="px-8 lg:px-0 max-w-7xl mx-auto">
       <Hero
         title="stories"
         description="Find out more information on the latest news and events involving the Otumfuo foundation."
@@ -22,7 +22,7 @@ function Stories() {
         <RecentStories2 />
         <AllStories />
       </div>
-    </div>
+    </main>
   );
 }
 

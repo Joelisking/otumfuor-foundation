@@ -67,7 +67,7 @@ function Hero({
   );
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-32 pt-12 pb-16 md:pt-20 md:pb-28 xl:pb-36">
+    <section className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-32 my-12">
       <HeroContent />
       <HeroImage />
     </section>

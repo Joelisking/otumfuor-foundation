@@ -35,7 +35,7 @@ async function RecentStories() {
   }
 
   return (
-    <section className="mt-16 md:mt-24 lg:mt-36">
+    <section className="mt-16 lg:mt-24">
       <Heading title="Recent Stories" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 gap-6 md:gap-8">
         {data.map((story) => (

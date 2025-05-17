@@ -7,13 +7,15 @@ import RecentStories from '@/components/stories/RecentStories';
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <>
       <HeroCarousel />
-      <StatsBanner />
-      <ThematicAreas />
-      <TextBanner />
-      <RecentStories />
-      <Partners />
-    </div>
+      <div className="px-8 lg:px-0 max-w-7xl mx-auto">
+        <StatsBanner />
+        <ThematicAreas />
+        <TextBanner />
+        <RecentStories />
+        <Partners />
+      </div>
+    </>
   );
 }

@@ -5,7 +5,7 @@ import React from 'react';
 
 function Donate() {
   return (
-    <div>
+    <main className="px-8 lg:px-0 max-w-7xl mx-auto">
       <Hero
         title="make a donation"
         description="Your acts of generosity make it possible to touch and transform the lives of many across the country."
@@ -13,7 +13,7 @@ function Donate() {
         showButtons={false}
       />
       <PaymentBanner />
-    </div>
+    </main>
   );
 }
 

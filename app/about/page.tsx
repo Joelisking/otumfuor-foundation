@@ -7,7 +7,7 @@ import img from '@/public/about-hero.jpg';
 
 function About() {
   return (
-    <>
+    <main className="px-8 lg:px-0 max-w-7xl mx-auto">
       <Hero
         title="who we are"
         description="Through this charity foundation, the Otumfuo Osei Tutu II
@@ -20,7 +20,7 @@ function About() {
       <MissionVision />
       <ThematicAccordion />
       <BoardOfTrustees />
-    </>
+    </main>
   );
 }
 

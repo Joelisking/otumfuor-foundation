@@ -3,11 +3,12 @@ import React from 'react';
 import { StaticImageData } from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
+import { urlFor } from '@/lib/sanity';
 
 interface HeroProps {
   title: string;
   description: string;
-  imageSrc: string | StaticImageData;
+  imageSrc: string | StaticImageData | any; // Allow Sanity image reference
   imageAlt?: string;
   showButtons?: boolean;
   primaryButtonText?: string;
@@ -21,16 +22,14 @@ function Hero({
   description,
   imageSrc,
   showButtons = true,
-  primaryButtonText = 'Donate Now',
-  secondaryButtonText = 'Get In Touch',
+  primaryButtonText = 'Read More',
   primaryButtonUrl = '/donate',
-  secondaryButtonUrl = '/contact',
 }: HeroProps) {
   const HeroContent = () => {
     const router = useRouter();
     return (
-      <div className="space-y-4 md:space-y-6 w-full md:w-2/3 text-white z-10">
-        <h1 className="capitalize text-2xl md:text-3xl lg:text-4xl font-bold line-clamp-2">
+      <div className="space-y-4 md:space-y-6 md:w-2/3 lg:w-4/5 text-white z-10 w-screen">
+        <h1 className="capitalize text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold line-clamp-2">
           {title}
         </h1>
         <p className="text-sm md:text-base lg:text-xl line-clamp-3 md:line-clamp-4">
@@ -43,28 +42,37 @@ function Hero({
               className="capitalize">
               {primaryButtonText}
             </Button>
-            <Button
-              onClick={() => router.push(secondaryButtonUrl)}
-              className="capitalize bg-white text-primary hover:bg-gray-100">
-              {secondaryButtonText}
-            </Button>
           </div>
         )}
       </div>
     );
   };
 
+  // Process image URL based on type
+  const getImageUrl = () => {
+    // Check if it's a Sanity image reference (has _type property)
+    if (
+      imageSrc &&
+      typeof imageSrc === 'object' &&
+      '_type' in imageSrc
+    ) {
+      return urlFor(imageSrc).url();
+    }
+    // It's already a URL string or StaticImageData
+    return typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
+  };
+
   return (
     <div
-      className="flex items-center h-96 md:h-80 lg:h-96 xl:h-112 w-full relative mt-10 lg:mt-20 rounded-2xl overflow-hidden"
+      className="flex items-center h-[50vh] lg:h-[80vh] w-full relative overflow-hidden"
       style={{
-        backgroundImage: `url(${imageSrc})`,
+        backgroundImage: `url(${getImageUrl()})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}>
       <div className="absolute inset-0 bg-black opacity-70" />
-      <div className="w-full h-full flex items-center px-6 md:px-12">
+      <div className="max-w-7xl mx-auto h-full flex items-center">
         <HeroContent />
       </div>
     </div>

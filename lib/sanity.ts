@@ -7,6 +7,7 @@ export const client = createClient({
   dataset: 'production',
   projectId: 'msbiqukr',
   useCdn: false,
+  withCredentials: true,
 });
 
 const builder = ImageUrlBuilder(client);

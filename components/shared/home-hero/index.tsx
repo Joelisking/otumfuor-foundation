@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
@@ -8,7 +9,7 @@ import { urlFor } from '@/lib/sanity';
 interface HeroProps {
   title: string;
   description: string;
-  imageSrc: string | StaticImageData | any; // Allow Sanity image reference
+  imageSrc: string | StaticImageData | any;
   imageAlt?: string;
   showButtons?: boolean;
   primaryButtonText?: string;
@@ -21,6 +22,7 @@ function Hero({
   title,
   description,
   imageSrc,
+  imageAlt = 'Hero image',
   showButtons = true,
   primaryButtonText = 'Read More',
   primaryButtonUrl = '/donate',
@@ -48,9 +50,8 @@ function Hero({
     );
   };
 
-  // Process image URL based on type
+  // Get the appropriate image URL
   const getImageUrl = () => {
-    // Check if it's a Sanity image reference (has _type property)
     if (
       imageSrc &&
       typeof imageSrc === 'object' &&
@@ -58,20 +59,24 @@ function Hero({
     ) {
       return urlFor(imageSrc).url();
     }
-    // It's already a URL string or StaticImageData
     return typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
   };
 
   return (
-    <div
-      className="flex items-center h-[50vh] lg:h-[80vh] w-full relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${getImageUrl()})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}>
+    <div className="flex items-center h-[50vh] lg:h-[80vh] w-full relative overflow-hidden">
+      {/* Image as background */}
+      <div className="absolute inset-0">
+        <Image
+          src={getImageUrl()}
+          alt={imageAlt}
+          fill
+          priority
+          style={{ objectFit: 'cover' }}
+        />
+      </div>
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-70" />
+      {/* Content */}
       <div className="max-w-7xl mx-auto h-full flex items-center">
         <HeroContent />
       </div>

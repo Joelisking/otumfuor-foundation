@@ -2,6 +2,7 @@ import { client, urlFor } from '@/lib/sanity';
 import { INewsArticle } from '@/lib/types';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
+import BackButton from '@/components/shared/back-button';
 
 export const revalidate = 60;
 
@@ -41,8 +42,10 @@ export default async function BlogArticle({
   const data: INewsArticle = await getData(id);
 
   return (
-    <main className="px-8 lg:px-0 max-w-7xl mx-auto lg:my-36">
-      <h1>
+    <main className="px-8 lg:px-0 max-w-7xl mx-auto my-16">
+      <BackButton />
+
+      <h1 className="max-w-4xl mx-auto">
         <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
           {data?.title}
         </span>

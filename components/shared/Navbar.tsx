@@ -82,9 +82,9 @@ function Navbar() {
               <Link
                 href="/"
                 onClick={closeMenu}
-                className={`block py-2 px-3 rounded hover:bg-blue-50 md:hover:bg-transparent md:hover:text-primary md:p-0 ${
+                className={`block py-2 px-3 rounded hover:bg-blue-50 md:hover:bg-transparent md:hover:text-primary md:p-0 relative ${
                   isActive('/')
-                    ? 'text-primary font-bold'
+                    ? 'text-primary font-bold after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary'
                     : 'text-gray-900'
                 }`}
                 aria-current={isActive('/') ? 'page' : undefined}>
@@ -95,9 +95,9 @@ function Navbar() {
               <Link
                 href="/about"
                 onClick={closeMenu}
-                className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${
+                className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 relative ${
                   isActive('/about')
-                    ? 'text-primary font-bold'
+                    ? 'text-primary font-bold after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary'
                     : 'text-gray-900'
                 }`}>
                 About
@@ -107,9 +107,9 @@ function Navbar() {
               <Link
                 href="/stories"
                 onClick={closeMenu}
-                className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${
+                className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 relative ${
                   isActive('/stories')
-                    ? 'text-primary font-bold'
+                    ? 'text-primary font-bold after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary'
                     : 'text-gray-900'
                 }`}>
                 Stories
@@ -119,9 +119,9 @@ function Navbar() {
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${
+                className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 relative ${
                   isActive('/contact')
-                    ? 'text-primary font-bold'
+                    ? 'text-primary font-bold after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary'
                     : 'text-gray-900'
                 }`}>
                 Contact

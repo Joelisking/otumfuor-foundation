@@ -191,27 +191,27 @@ export const statsData = [
   },
   {
     id: 2,
-    number: 5,
+    number: 30,
     description: 'Life-Changing Projects',
   },
   {
     id: 3,
-    number: 10,
+    number: 86,
     description: 'Volunteers',
   },
   {
     id: 4,
-    number: 200,
+    number: '1 Million',
     description: 'Student Beneficiaries',
   },
   {
     id: 5,
-    number: 10,
+    number: 500,
     description: 'Beneficiary Schools',
   },
   {
     id: 6,
-    number: 7,
+    number: 8,
     description: 'Regions',
   },
 ];

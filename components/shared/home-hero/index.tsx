@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -27,6 +27,8 @@ function Hero({
   primaryButtonText = 'Read More',
   primaryButtonUrl = '/donate',
 }: HeroProps) {
+  const [imageLoading, setImageLoading] = useState(true);
+
   const HeroContent = () => {
     const router = useRouter();
     return (
@@ -64,6 +66,19 @@ function Hero({
 
   return (
     <div className="flex items-center h-[50vh] lg:h-[80vh] w-full relative overflow-hidden">
+      {/* Loading indicator */}
+      {imageLoading && (
+        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center z-10">
+          <div className="flex items-center justify-center">
+            <div className="relative">
+              {/* Pulsating circle animation */}
+              <div className="w-12 h-12 rounded-full border-4 border-primary opacity-60 animate-ping absolute"></div>
+              <div className="w-12 h-12 rounded-full border-4 border-t-transparent border-primary animate-spin"></div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Image as background */}
       <div className="absolute inset-0">
         <Image
@@ -72,10 +87,13 @@ function Hero({
           fill
           priority
           style={{ objectFit: 'cover' }}
+          onLoadingComplete={() => setImageLoading(false)}
         />
       </div>
+
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-70" />
+
       {/* Content */}
       <div className="max-w-7xl mx-auto h-full flex items-center">
         <HeroContent />

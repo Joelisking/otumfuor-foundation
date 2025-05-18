@@ -24,14 +24,17 @@ function StatsBanner() {
   return (
     <div className="max-w-7xl mx-auto mt-20">
       <div className="bg-primary rounded-xl shadow-md overflow-hidden">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px p-4 md:p-6 bg-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px p-4 md:p-6">
           {statsData.map((stat) => (
             <div
               key={stat.id}
               className="flex flex-col items-center justify-center p-4 text-center text-white">
               <p className="text-2xl sm:text-3xl lg:text-4xl font-bold">
-                <AnimatedNumber to={stat.number} />
-                <span>+</span>
+                {typeof stat.number === 'number' ? (
+                  <AnimatedNumber to={stat.number} />
+                ) : (
+                  stat.number
+                )}
               </p>
               <p className="text-sm mt-2 text-white/80">
                 {stat.description}

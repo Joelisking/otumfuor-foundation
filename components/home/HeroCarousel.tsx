@@ -16,10 +16,11 @@ interface HeroStory {
   _id: string;
   title: string;
   smallDescription: string;
-  titleImage: any; // Allow for Sanity image reference format
+  titleImage: any;
+  secondaryImage?: any;
   currentSlug: string;
 }
-
+export const revalidate = 60;
 function HeroCarousel() {
   const [heroStories, setHeroStories] = useState<HeroStory[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +33,7 @@ function HeroCarousel() {
           title,
           smallDescription,
           titleImage,
+          secondaryImage,
           "currentSlug": slug.current
         }
       `;
@@ -78,7 +80,7 @@ function HeroCarousel() {
                 <Hero
                   title={story.title}
                   description={story.smallDescription}
-                  imageSrc={story.titleImage}
+                  imageSrc={story.secondaryImage || story.titleImage}
                   primaryButtonUrl={`/stories/${story.currentSlug}`}
                 />
               </div>

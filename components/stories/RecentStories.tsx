@@ -18,6 +18,7 @@ async function getData() {
     smallDescription,
     "currentSlug": slug.current,
     titleImage,
+    secondaryImage,
     date
   }`;
 
@@ -45,6 +46,7 @@ async function RecentStories() {
             title={story.title}
             description={story.smallDescription}
             imgUrl={story.titleImage}
+            secondaryImgUrl={story.secondaryImage}
             date={story.date}
           />
         ))}

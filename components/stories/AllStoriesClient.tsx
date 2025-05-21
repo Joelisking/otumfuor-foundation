@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import StoryCard from '../shared/StoryCard';
 import { INewsList, ITag } from '@/lib/types';
 import Heading from '../shared/heading';
+import { useSearchParams } from 'next/navigation';
 
 interface AllStoriesClientProps {
   tags: ITag[];
@@ -14,7 +15,17 @@ export default function AllStoriesClient({
   tags,
   stories,
 }: AllStoriesClientProps) {
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const searchParams = useSearchParams();
+  const initialTag = searchParams.get('tag');
+  const [selectedTag, setSelectedTag] = useState<string | null>(
+    initialTag
+  );
+
+  useEffect(() => {
+    // Update selected tag when URL changes
+    const tag = searchParams.get('tag');
+    setSelectedTag(tag);
+  }, [searchParams]);
 
   const filteredStories = selectedTag
     ? stories.filter(

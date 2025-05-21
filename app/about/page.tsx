@@ -4,10 +4,10 @@ import MissionVision from '@/components/about/MissionVision';
 import ThematicAccordion from '@/components/about/ThematicAccordion';
 import Hero from '@/components/shared/hero';
 import img from '@/public/about-hero.jpg';
-
+export const revalidate = 60;
 function About() {
   return (
-    <main className="px-8 lg:px-0 max-w-7xl mx-auto">
+    <main>
       <Hero
         title="who we are"
         description="Through this charity foundation, the Otumfuo Osei Tutu II
@@ -15,11 +15,15 @@ function About() {
         change and transformation not only in Asanteman but the whole
         of Ghana."
         imageSrc={img}
+        primaryButtonText="Get In Touch"
+        primaryButtonUrl={'/contact'}
       />
-      <CoreValues />
-      <MissionVision />
-      <ThematicAccordion />
-      <BoardOfTrustees />
+      <div className="px-8 lg:px-0 max-w-7xl mx-auto mt-16">
+        <CoreValues />
+        <MissionVision />
+        <ThematicAccordion />
+        <BoardOfTrustees />
+      </div>
     </main>
   );
 }

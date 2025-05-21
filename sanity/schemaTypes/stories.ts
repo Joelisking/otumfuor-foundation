@@ -19,7 +19,13 @@ export default {
     {
       name: 'titleImage',
       type: 'image',
-      title: 'Title Image',
+      title: 'Primary Banner Image',
+    },
+    {
+      name: 'secondaryImage',
+      type: 'image',
+      title: 'Secondary Banner Image',
+      description: 'Optional second banner image for the same story',
     },
     {
       name: 'smallDescription',
@@ -33,6 +39,30 @@ export default {
       of: [
         {
           type: 'block',
+        },
+        {
+          type: 'image',
+          name: 'inlineImage',
+          title: 'Inline Image',
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    },
+    {
+      name: 'additionalImages',
+      type: 'array',
+      title: 'Additional Images',
+      description: 'Add more images to be displayed below the content',
+      of: [
+        {
+          type: 'image',
+          name: 'image',
+          title: 'Image',
+          options: {
+            hotspot: true,
+          },
         },
       ],
     },

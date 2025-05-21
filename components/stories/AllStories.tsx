@@ -1,6 +1,7 @@
 import { client } from '@/lib/sanity';
 import { INewsList, ITag } from '@/lib/types';
 import AllStoriesClient from './AllStoriesClient';
+import { Suspense } from 'react';
 
 export const revalidate = 30;
 
@@ -11,6 +12,7 @@ async function getData() {
       smallDescription,
       "currentSlug": slug.current,
       titleImage,
+      secondaryImage,
       date,
       "tags": tags[]->{ _id, name, "slug": slug.current }
     }`;
@@ -38,5 +40,9 @@ export default async function AllStories() {
   const tags: ITag[] = await getAllTags();
   const stories: INewsList[] = await getData();
 
-  return <AllStoriesClient tags={tags} stories={stories} />;
+  return (
+    <Suspense fallback={<div>Loading stories...</div>}>
+      <AllStoriesClient tags={tags} stories={stories} />
+    </Suspense>
+  );
 }

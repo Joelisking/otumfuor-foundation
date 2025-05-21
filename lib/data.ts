@@ -20,7 +20,7 @@ import fidelity from '@/public/payment/fidelity.svg';
 import momo from '@/public/payment/momo.svg';
 import culture from '@/public/thematic/culture.jpg';
 import education from '@/public/thematic/education.jpg';
-import entrepreneurship from '@/public/thematic/entrepreneurship.jpg';
+import entrepreneurship from '@/public/thematic/entrepreneurship.jpeg';
 import health from '@/public/thematic/health.jpg';
 import water from '@/public/thematic/water.jpg';
 
@@ -147,6 +147,20 @@ export const homeData = [
 
 export const thematicData = [
   {
+    id: 5,
+    title: 'Entrepreneurship',
+    description:
+      'Rallying partners in business, academia, and the wider society to drive a unique rejuvenation of Ghanaian entrepreneurship.',
+    image: entrepreneurship,
+  },
+  {
+    id: 3,
+    title: 'Culture & Heritage',
+    description:
+      'Promoting and preserving the culture and natural heritage of the Asante Kingdom for development in tourism.',
+    image: culture,
+  },
+  {
     id: 1,
     title: 'Water & Sanitation',
     description:
@@ -160,26 +174,13 @@ export const thematicData = [
       'Providing sustainable health care services to protect vulnerable populations in Ghana from infectious disease.',
     image: health,
   },
-  {
-    id: 3,
-    title: 'Culture & Heritage',
-    description:
-      'Promoting and preserving the culture and natural heritage of the Asante Kingdom for development in tourism.',
-    image: culture,
-  },
+
   {
     id: 4,
     title: 'Education',
     description:
       'Providing equal learning opportunities to support education of children from pre-school age through to adolescence.',
     image: education,
-  },
-  {
-    id: 5,
-    title: 'Entrepreneurship',
-    description:
-      'Rallying partners in business, academia, and the wider society to drive a unique rejuvenation of Ghanaian entrepreneurship.',
-    image: entrepreneurship,
   },
 ];
 

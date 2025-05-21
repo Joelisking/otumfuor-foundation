@@ -15,6 +15,7 @@ export interface INewsList {
   smallDescription: string;
   currentSlug: string;
   titleImage: any;
+  secondaryImage?: any;
   date?: string;
   tags?: ITag[];
 }
@@ -25,4 +26,6 @@ export interface INewsArticle {
   title: string;
   content: any;
   titleImage: any;
+  secondaryImage?: any;
+  additionalImages?: any[];
 }

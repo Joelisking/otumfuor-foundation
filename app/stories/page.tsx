@@ -5,19 +5,21 @@ import AllStories from '@/components/stories/AllStories';
 import img from '@/public/stories2.jpg';
 import RecentStories2 from '@/components/stories/RecentStories';
 
+export const revalidate = 60;
+
 function Stories() {
   return (
-    <main className="px-8 lg:px-0 max-w-7xl mx-auto">
+    <main>
       <Hero
         title="stories"
-        description="Find out more information on the latest news and events involving the Otumfuo foundation."
+        description="Discover the inspiring stories and transformative projects undertaken by the Otumfuo Osei Tutu II
+        Foundation. From education and healthcare to cultural preservation and community development, explore how
+        we're making lasting impact across Ghana."
         imageSrc={img}
         primaryButtonText="Donate Now"
         primaryButtonUrl={'/donate'}
-        secondaryButtonText="Get In Touch"
-        secondaryButtonUrl={'/contact'}
       />
-      <div>
+      <div className="px-8 lg:px-0 max-w-7xl mx-auto mt-16 lg:mt-24">
         <UpcomingEvents />
         <RecentStories2 />
         <AllStories />

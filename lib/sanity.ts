@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createClient } from 'next-sanity';
 import ImageUrlBuilder from '@sanity/image-url';
 

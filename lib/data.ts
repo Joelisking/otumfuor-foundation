@@ -5,11 +5,13 @@ import commitment from '@/public/commitment.svg';
 import mission from '@/public/mission.svg';
 import vision from '@/public/vision.svg';
 import partner1 from '@/public/partners/ecom.svg';
-import partner2 from '@/public/partners/global-communities.svg';
+import partner2 from '@/public/partners/Anglogold.png';
 import partner3 from '@/public/partners/mastercard.svg';
-import partner4 from '@/public/partners/newmont.svg';
+import partner4 from '@/public/partners/Newmont.png';
 import partner5 from '@/public/partners/smiles.svg';
-import partner6 from '@/public/partners/zoomlion.svg';
+import partner6 from '@/public/partners/jp.png';
+import partner7 from '@/public/partners/WUEC.png';
+import partner8 from '@/public/partners/Edusie Foundation.png';
 import facebook from '@/public/facebook.svg';
 import instagram from '@/public/instagram.svg';
 import youtube from '@/public/youtube.svg';
@@ -108,6 +110,16 @@ export const partnersData = [
   {
     id: 6,
     image: partner6,
+    alt: '',
+  },
+  {
+    id: 7,
+    image: partner7,
+    alt: '',
+  },
+  {
+    id: 8,
+    image: partner8,
     alt: '',
   },
 ];

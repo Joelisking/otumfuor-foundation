@@ -9,8 +9,7 @@ function PaymentBanner() {
         Ways to donate
       </p>
       <p className="mb-8 sm:mb-12 lg:mb-16 text-lg sm:text-xl">
-        I have found that among its other benefits, giving liberates
-        the soul of the giver.
+        We believe that, among its many benefits, giving has the power to liberate the soul of the giver
       </p>
       <div className="space-y-8 sm:space-y-10 lg:space-y-12 mb-12 sm:mb-16 lg:mb-20">
         {paymentData.map((payment) => (

@@ -8,7 +8,7 @@ function Donate() {
     <main>
       <Hero
         title="make a donation"
-        description="We believe that, among its many benefits, giving has the power to liberate the soul of the giver"
+        description="Your acts of generosity make it possible to touch and transform the lives of many across the country. Every donation, no matter the size, contributes to our mission of creating lasting positive change in communities throughout Ghana. Together, we can build a brighter future through education, healthcare, and sustainable development initiatives."
         imageSrc={img}
         primaryButtonText="Learn More"
         primaryButtonUrl="/about"

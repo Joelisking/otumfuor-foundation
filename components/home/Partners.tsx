@@ -16,7 +16,7 @@ function Partners() {
             <Image
               src={data.image}
               alt={data.alt}
-              width={120}
+              width={150}
               height={48}
               className="opacity-90 hover:opacity-100 transition duration-200 w-auto h-auto"
             />

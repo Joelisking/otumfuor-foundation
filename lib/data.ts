@@ -147,18 +147,18 @@ export const homeData = [
 
 export const thematicData = [
   {
-    id: 5,
-    title: 'Entrepreneurship',
+    id: 4,
+    title: 'Education',
     description:
-      'Rallying partners in business, academia, and the wider society to drive a unique rejuvenation of Ghanaian entrepreneurship.',
-    image: entrepreneurship,
+      'Providing equal learning opportunities to support education of children from pre-school age through to adolescence.',
+    image: education,
   },
   {
-    id: 3,
-    title: 'Culture & Heritage',
+    id: 2,
+    title: 'Health',
     description:
-      'Promoting and preserving the culture and natural heritage of the Asante Kingdom for development in tourism.',
-    image: culture,
+      'Providing sustainable health care services to protect vulnerable populations in Ghana from infectious disease.',
+    image: health,
   },
   {
     id: 1,
@@ -168,19 +168,18 @@ export const thematicData = [
     image: water,
   },
   {
-    id: 2,
-    title: 'Health',
+    id: 3,
+    title: 'Culture & Heritage',
     description:
-      'Providing sustainable health care services to protect vulnerable populations in Ghana from infectious disease.',
-    image: health,
+      'Promoting and preserving the culture and natural heritage of the Asante Kingdom for development in tourism.',
+    image: culture,
   },
-
   {
-    id: 4,
-    title: 'Education',
+    id: 5,
+    title: 'Entrepreneurship',
     description:
-      'Providing equal learning opportunities to support education of children from pre-school age through to adolescence.',
-    image: education,
+      'Rallying partners in business, academia, and the wider society to drive a unique rejuvenation of Ghanaian entrepreneurship.',
+    image: entrepreneurship,
   },
 ];
 

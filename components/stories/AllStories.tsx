@@ -23,10 +23,11 @@ async function getData() {
 async function getAllTags() {
   try {
     const query = `
-      *[_type == 'tag'] | order(name asc) {
+      *[_type == 'tag'] | order(order asc) {
         _id,
         name,
-        "slug": slug.current
+        "slug": slug.current,
+        order
       }`;
     const data = await client.fetch(query);
     return data;

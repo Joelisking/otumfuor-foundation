@@ -6,6 +6,7 @@ interface TagField {
   options?: {
     source: string
   }
+  description?: string
 }
 
 interface TagSchema {
@@ -39,6 +40,13 @@ const tag: TagSchema = {
       name: 'description',
       type: 'text',
       title: 'Description',
+    },
+    {
+      name: 'order',
+      type: 'number',
+      title: 'Order',
+      description: 'Used to sort tags in a specific order',
+      validation: (Rule) => Rule.required().integer().min(0),
     },
   ],
 }

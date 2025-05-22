@@ -67,10 +67,10 @@ export default {
       ],
     },
     {
-      name: 'showOnHomepage',
+      name: 'recentStory',
       type: 'boolean',
-      title: 'Show on main page?',
-      description: 'Toggle this to display this story on the home page.',
+      title: 'Recent Story',
+      description: 'Toggle this to display this story in the Recent Stories section.',
     },
     {
       name: 'showInHeroCarousel',

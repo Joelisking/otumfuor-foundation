@@ -25,7 +25,6 @@ export default function StoryCard({
   title,
   description,
   imgUrl,
-  secondaryImgUrl,
   date,
   tags,
 }: StoryCardProps) {
@@ -46,16 +45,6 @@ export default function StoryCard({
             </div>
           )}
         </div>
-        {secondaryImgUrl && (
-          <div className="relative h-48 w-full">
-            <Image
-              src={urlFor(secondaryImgUrl).url()}
-              alt={`${title} - Secondary`}
-              fill
-              className="object-cover"
-            />
-          </div>
-        )}
         <div className="p-4 bg-gray-50">
           {date && (
             <p className="text-sm text-gray-500 mb-2">

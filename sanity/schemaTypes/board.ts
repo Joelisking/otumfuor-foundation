@@ -18,5 +18,12 @@ export default {
       type: 'image',
       title: 'Image',
     },
+    {
+      name: 'priority',
+      type: 'number',
+      title: 'Display Priority',
+      description: 'Set the display order (lower number = higher priority)',
+      validation: (Rule: any) => Rule.required().min(1),
+    },
   ],
 }

@@ -2,6 +2,7 @@ export interface IBoard {
   name: string;
   role: string;
   image: string;
+  priority: number;
 }
 
 export interface ITag {

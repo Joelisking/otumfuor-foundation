@@ -6,11 +6,12 @@ import { client, urlFor } from '@/lib/sanity';
 
 async function getData() {
   const query = `
-    *[_type == 'board'] {
-  name,
-  role,
-  image
-}`;
+    *[_type == 'board'] | order(priority asc) {
+      name,
+      role,
+      image,
+      priority
+    }`;
 
   const data = await client.fetch(query);
   return data;

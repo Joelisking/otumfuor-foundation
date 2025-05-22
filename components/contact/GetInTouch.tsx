@@ -5,6 +5,34 @@ import { Card, CardContent, CardHeader } from '../ui/card';
 import { contactDetails } from '@/lib/data';
 
 function GetInTouch() {
+  const renderDescription = (description: string) => {
+    // Split the description by newlines and map each line
+    return description.split('\n').map((line, index) => {
+      // Check if the line contains an email address
+      if (line.includes('@')) {
+        // Split by spaces to handle multiple emails
+        return line.split(' ').map((part, partIndex) => {
+          if (part.includes('@')) {
+            return (
+              <React.Fragment key={`${index}-${partIndex}`}>
+                <a
+                  href={`mailto:${part.trim()}`}
+                  className="text-primary hover:underline">
+                  {part.trim()}
+                </a>
+                {partIndex < line.split(' ').length - 1 ? ' ' : ''}
+              </React.Fragment>
+            );
+          }
+          return (
+            part + (partIndex < line.split(' ').length - 1 ? ' ' : '')
+          );
+        });
+      }
+      return line;
+    });
+  };
+
   return (
     <section className="my-12 md:my-24 lg:my-36">
       <SectionHeading title="get in touch" />
@@ -25,7 +53,7 @@ function GetInTouch() {
                 {detail.title}
               </span>
               <p className="mt-4 md:mt-6 text-base lg:text-xl whitespace-pre-line">
-                {detail.description}
+                {renderDescription(detail.description)}
               </p>
             </CardContent>
           </Card>

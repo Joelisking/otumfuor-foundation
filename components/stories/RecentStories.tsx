@@ -7,13 +7,8 @@ import Heading from '../shared/heading';
 export const revalidate = 30;
 
 async function getData() {
-  // Get stories from the last 30 days
-  const thirtyDaysAgo = new Date();
-  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-  const formattedDate = thirtyDaysAgo.toISOString();
-
   const query = `
-  *[_type == 'stories' && date >= $thirtyDaysAgo && upcoming != true] | order(date desc) {
+  *[_type == 'stories' && recentStory == true] | order(date desc) {
     title,
     smallDescription,
     "currentSlug": slug.current,
@@ -22,9 +17,7 @@ async function getData() {
     date
   }`;
 
-  const data = await client.fetch(query, {
-    thirtyDaysAgo: formattedDate,
-  });
+  const data = await client.fetch(query);
   return data;
 }
 

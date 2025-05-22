@@ -299,7 +299,7 @@ export const contactDetails = [
   {
     number: 3,
     title: 'Email Us',
-    description: `infor@otumfuofoundation.org.gh
+    description: `info@otumfuofoundation.org.gh
        hkodua@otumfuofoundation.org.gh`,
   },
 ];

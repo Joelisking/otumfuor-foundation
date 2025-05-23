@@ -127,6 +127,18 @@ function Navbar() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link
+                href="https://manhyiapalace.org/"
+                onClick={closeMenu}
+                className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 relative ${
+                  isActive('/contact')
+                    ? 'text-primary font-bold after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary'
+                    : 'text-gray-900'
+                }`}>
+                Manhyia Palace
+              </Link>
+            </li>
             <li className="bg-primary py-1.5 px-4 rounded-md cursor-pointer hover:bg-primary/90 hover:scale-105 transition-all">
               <Link
                 href="/donate"

@@ -6,13 +6,13 @@ import Heading from '../shared/heading';
 
 function Partners() {
   return (
-    <section className="my-16 md:my-24 lg:my-36">
+    <section className="mt-20 ">
       <Heading title="Partners" />
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 space-x-8 lg:space-x-2">
         {partnersData.map((data) => (
           <div
             key={data.id}
-            className="shrink-0 px-4 md:px-6 lg:px-8 flex justify-center items-center">
+            className="shrink-0 px-4 md:px-6 lg:px-4 flex justify-center items-center space-x-0 space-y-0">
             <Image
               src={data.image}
               alt={data.alt}

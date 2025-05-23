@@ -80,8 +80,18 @@ export default async function BlogArticle({
         </div>
       </div>
 
-      <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
-        <PortableText value={data?.content} components={components} />
+      <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary prose-p:mb-8">
+        <PortableText
+          value={data?.content}
+          components={{
+            ...components,
+            block: {
+              normal: ({ children }) => (
+                <p className="mb-8">{children}</p>
+              ),
+            },
+          }}
+        />
       </div>
 
       {data?.additionalImages && data.additionalImages.length > 0 && (

@@ -19,8 +19,9 @@ function BoardCard({ image, name, role }: Props) {
         />
       </div>
       <div className="flex items-center justify-center mt-3">
-        <span className="font-bold text-lg md:text-xl">
-          {name},{' '}
+        <span className="font-bold text-lg md:text-xl text-center">
+          {name}{''}
+          <br />
           <span className="text-lg md:text-xl font-light">
             {role}
           </span>

@@ -4,7 +4,7 @@ import { INewsArticle } from '@/lib/types';
 import { PortableText } from 'next-sanity';
 import BackButton from '@/components/shared/back-button';
 
-export const revalidate = 60;
+export const revalidate = 0;
 
 export async function generateMetadata({
   params,

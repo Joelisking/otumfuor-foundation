@@ -132,7 +132,7 @@ function Navbar() {
                 href="https://manhyiapalace.org/"
                 onClick={closeMenu}
                 className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 relative ${
-                  isActive('/contact')
+                  isActive('')
                     ? 'text-primary font-bold after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary'
                     : 'text-gray-900'
                 }`}>

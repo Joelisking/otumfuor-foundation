@@ -1,7 +1,6 @@
 import React from 'react';
 import SectionHeading from '../shared/heading';
 import { Card, CardContent, CardHeader } from '../ui/card';
-import Image from 'next/image';
 import { cardData } from '@/lib/data';
 
 function MissionVision() {
@@ -15,8 +14,8 @@ function MissionVision() {
             key={card.id}
             className="bg-primary rounded-3xl flex flex-col pb-14">
             <CardHeader className="h-10 lg:h-14 flex items-center">
-              <Image
-                src={card.image}
+              <img
+                src={card.image.src || card.image}
                 alt={`${card.title} Icon`}
                 className="w-12 lg:w-12"
               />

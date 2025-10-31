@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { urlFor } from '@/lib/sanity';
 import { formatDate } from '@/lib/utils';
@@ -33,11 +32,10 @@ export default function StoryCard({
       <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
         <div className="relative h-48 w-full">
           {imgUrl ? (
-            <Image
+            <img
               src={urlFor(imgUrl).url()}
               alt={title}
-              fill
-              className="object-cover"
+              className="object-cover w-full h-full"
             />
           ) : (
             <div className="bg-gray-200 h-full w-full flex items-center justify-center">

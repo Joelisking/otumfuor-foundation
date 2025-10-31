@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { paymentData } from '@/lib/data';
 
 function PaymentBanner() {
@@ -17,8 +16,8 @@ function PaymentBanner() {
             key={payment.id}
             className="py-6 sm:py-8 lg:py-10 px-6 sm:px-10 lg:px-20 rounded-xl shadow-sm md:shadow-xl border border-gray-100">
             <div className="w-20 sm:w-24 md:w-32 lg:w-40">
-              <Image
-                src={payment.image}
+              <img
+                src={payment.image.src || payment.image}
                 alt={`${payment.image} logo`}
                 className="py-3 sm:py-4 lg:py-5"
               />

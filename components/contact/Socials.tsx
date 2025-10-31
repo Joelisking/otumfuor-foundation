@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionHeading from '../shared/heading';
-import Image from 'next/image';
 import { socials } from '@/lib/data';
 import Link from 'next/link';
 
@@ -23,8 +22,8 @@ function Socials() {
             className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:shadow-lg flex flex-col items-center hover:scale-105">
               <div className="bg-primary p-4 rounded-full mb-4 transition-colors duration-300">
-                <Image
-                  src={s.img}
+                <img
+                  src={s.img.src || s.img}
                   alt={`${s.name} Logo`}
                   className="w-10 h-10"
                 />

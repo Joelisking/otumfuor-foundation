@@ -1,7 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import Image from 'next/image';
-import { StaticImageData } from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { urlFor } from '@/lib/sanity';
@@ -9,7 +7,7 @@ import { urlFor } from '@/lib/sanity';
 interface HeroProps {
   title: string;
   description: string;
-  imageSrc: string | StaticImageData | any;
+  imageSrc: string | any;
   imageAlt?: string;
   showButtons?: boolean;
   primaryButtonText?: string;
@@ -82,13 +80,11 @@ function Hero({
 
       {/* Image as background */}
       <div className="absolute inset-0">
-        <Image
+        <img
           src={getImageUrl()}
           alt={imageAlt}
-          fill
-          priority
-          style={{ objectFit: 'cover' }}
-          onLoadingComplete={() => setImageLoading(false)}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          onLoad={() => setImageLoading(false)}
         />
       </div>
 

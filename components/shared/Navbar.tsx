@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import logo from '@/public/logo.png';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -26,11 +25,10 @@ function Navbar() {
       <div className="max-w-7xl flex items-center justify-between mx-auto py-4 px-8 xl:px-0">
         <Link href="/" className="flex items-center">
           <div className="relative h-12 w-36">
-            <Image
-              src={logo}
+            <img
+              src={typeof logo === 'string' ? logo : logo.src}
               alt="OTIIF Logo"
-              className="object-contain"
-              fill
+              className="object-contain w-full h-full"
             />
           </div>
         </Link>

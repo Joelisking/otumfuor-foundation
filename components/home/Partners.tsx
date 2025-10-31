@@ -1,7 +1,6 @@
 'use client';
 import { partnersData } from '@/lib/data';
 import React from 'react';
-import Image from 'next/image';
 import Heading from '../shared/heading';
 
 function Partners() {
@@ -13,8 +12,8 @@ function Partners() {
           <div
             key={data.id}
             className="shrink-0 px-4 md:px-6 lg:px-1 flex justify-center items-center space-x-0 space-y-0">
-            <Image
-              src={data.image}
+            <img
+              src={data.image.src || data.image}
               alt={data.alt}
               width={150}
               height={48}
